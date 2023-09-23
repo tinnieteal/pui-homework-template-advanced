@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+.navbar {
+  border-bottom: 4px solid black;
+  padding: 0px 0px 40px 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none; /* Remove list bullets */ 
+  float: right;
+  padding-inline-start: 0px;
+  width: 256px;
+  margin-right: 40px;
+} 
+
+.navbar li {
+  display: inline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.nav-row-container {
+  display: grid;
+  grid-template-columns: 360px auto;
+  column-gap: 10px;
+  margin: 40px 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-column-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 32px 0px 32px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.navmenu-link{
+  background-color: white;
+  border: transparent;
+  font-size: 24px;
+  margin: 0px 0px 2px;
+  padding: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.webtitle{
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
+
+.pricetext{
+  font-size: 24px;
+  font-weight: bold;
+  margin: 32px 0px 32px 0px;
+}
+
+.bodytext{
+  font-size: 16px;
+  margin: 12px 0px 12px 0px;
+}
+
+.logo-container {
+  width: 360px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 30px 140px 30px 140px;
+}
+
+.grid-container {
+  margin: 0 100px 0 100px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 13px;
+}
+
+.row-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+  width: 274px;
+}
+
+.image-container {
+  width: 270px;
+  height: 270px;
+  border: 2px solid black;
+  margin-bottom: 4px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.element-title {
+  margin: 0 0 20px 0;
+}
+
+.row-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content-right {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+/* citation: https://stackoverflow.com/questions/14218307/select-arrow-style-change */
+.dropdown{
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 105px;
+  background-position-y: -8px;
+  height: 35px;
+  width: 155px;
+  font-size: 16px;
+  padding-left: 3px;
+  border-color: black;
+  border-width: 2px;
+}
+
+.button-pack-size {
+  border-radius: 0;
+  border-color: black;
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.button-pack-size:focus{
+  background-color: lightgray
+}
+
+.button-add-to-cart {
+  width: 150px;
+  height: 40px;
+  border-radius: 0%;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-color: black;
+}
+
+.link:hover {
+  background-color: yellow;
+  font-weight: bold;
+} 
+
+.filled-triangle {
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 13px solid black;
+  margin-left: 10px;
+}
+
+.pack-size-number{
+  width: 10px;
+  height: 10px;
+  border-color: black;
+}
+
+
