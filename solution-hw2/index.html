@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="js/price.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-row-container">
+            <div class="logo-container">
+                <img src="assets/logo/logo-01.svg">
+            </div>
+            <div class="nav-column-container">
+                <div class="navbar">
+                    <ul>
+                        <button type="submit" class="navmenu-link link">PRODUCTS</button>
+                        <!-- <li class="link">PRODUCTS</li> -->
+                        <li class="hover-text">CART
+                            <div class="tooltip-container">
+                                <!-- tooltip content, dynamically rendered in JS -->
+                    </ul>
+                </div>
+                <div class="nav-menu">
+                    <p class="cart-text" id="total-item">0 item</p>
+                    <p class="cart-text" id="final-price">Total: $ 0</p> 
+                </div>
+                <p class="web-title">Our hand-made cinnamon rolls</p>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="grid-container">
+                <!-- cinnamon roll #1  -->
+                <div class="element-container">
+                    <div class="image-container">
+                        <img src="assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll">
+                    </div>
+                    <h2 class="element-title">Original cinnamon roll</h2>
+
+                    <div class="row-content"> 
+                        <p class="bodytext">Glazing:</h3>
+                        <div class="content-right glazing-selector">
+                            <!-- glazing dropdown, generated in JS -->
+                        </div>
+                    </div>
+
+                    <div class="row-content">
+                        <p class="bodytext">Pack size:</h3>
+                        <fieldset>
+                            <div class="content-right radio-selector">
+                                <!-- radio buttons, generated in JS   -->
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="row-content">
+                        <div class="rollprice">
+                            <!-- price, dynamically generated in JS -->
+                        </div>
+                        <div class="content-right add-to-cart" >
+                            <!-- add to cart button, dynamically generated in JS -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- cinnamon roll #2 -->
+                <div class="element-container">
+                    <div class="image-container">
+                        <img src="assets/products/apple-cinnamon-roll.jpg" alt="apple cinnamon roll">
+                    </div>
+                    <h2 class="element-title">Apple cinnamon roll</h2>
+
+                    <!-- container for each row content -->
+                    <div class="row-content"> 
+                        <p class="bodytext">Glazing:</h3>
+                        <div class="content-right glazing-selector">
+                            <!-- glazing dropdown, generated in JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="row-content">
+                        <p class="bodytext">Pack size:</h3>
+                            <fieldset>
+                                <div class="content-right radio-selector">
+                                    <!-- radio buttons, generated in JS   -->
+                                </div>
+                            </fieldset>
+                            
+                    </div>
+
+                    <div class="row-content">
+                        <div class="rollprice">
+                            <!-- price, dynamically generated in JS -->
+                        </div>
+                        <div class="content-right add-to-cart" >
+                            <!-- add to cart button, dynamically generated in JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cinnamon roll #3 -->
+                <div class="element-container">
+                    <div class="image-container">
+                        <img src="assets/products/raisin-cinnamon-roll.jpg" alt="raisin cinnamon roll">
+                    </div>
+                    <h2 class="element-title">Raisin cinnamon roll</h2>
+                
+                    <div class="row-content"> 
+                        <p class="bodytext">Glazing:</h3>
+                        <div class="content-right glazing-selector">
+                            <!-- glazing dropdown, generated in JS -->
+                        </div>
+                    </div>
+
+                    <div class="row-content">
+                        <p class="bodytext">Pack size:</h3>
+                        <fieldset>
+                            <div class="content-right radio-selector">
+                                <!-- radio buttons, generated in JS   -->
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="row-content">
+                        <div class="rollprice">
+                            <!-- price, dynamically generated in JS -->
+                        </div>
+                        <div class="content-right add-to-cart" >
+                            <!-- add to cart button, dynamically generated in JS -->
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- cinnamon roll #4  -->
+                <div class="element-container">
+                    <div class="image-container">
+                        <img src="assets/products/walnut-cinnamon-roll.jpg" alt="walnut cinnamon roll">
+                    </div>
+                    <h2 class="element-title">Walnut cinnamon roll</h2>
+
+                    <div class="row-content"> 
+                        <p class="bodytext">Glazing:</h3>
+                        <div class="content-right glazing-selector">
+                            <!-- glazing dropdown, generated in JS -->
+                        </div>
+                    </div>
+
+                    <div class="row-content">
+                        <p class="bodytext">Pack size:</h3>
+                        <fieldset>
+                            <div class="content-right radio-selector">
+                                <!-- radio buttons, generated in JS   -->
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="row-content">
+                        <div class="rollprice">
+                            <!-- price, dynamically generated in JS -->
+                        </div>
+                        <div class="content-right add-to-cart" >
+                            <!-- add to cart button, dynamically generated in JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cinnamon roll #5 -->
+                <div class="element-container">
+                    <div class="image-container">
+                        <img src="assets/products/double-chocolate-cinnamon-roll.jpg" alt="double chocolate cinnamon roll">
+                    </div>
+                    <h2 class="element-title">Double-chocolate cinnamon roll</h2>
+
+                    <div class="row-content"> 
+                        <p class="bodytext">Glazing:</h3>
+                        <div class="content-right glazing-selector">
+                            <!-- glazing dropdown, generated in JS -->
+                        </div>
+                    </div>
+
+                    <div class="row-content">
+                        <p class="bodytext">Pack size:</h3>
+                        <fieldset>
+                            <div class="content-right radio-selector">
+                                <!-- radio buttons, generated in JS   -->
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="row-content">
+                        <div class="rollprice">
+                            <!-- price, dynamically generated in JS -->
+                        </div>
+                        <div class="content-right add-to-cart" >
+                            <!-- add to cart button, dynamically generated in JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cinnamon roll #6 -->
+                <div class="element-container">
+                    <div class="image-container">
+                        <img src="assets/products/strawberry-cinnamon-roll.jpg" alt="strawberry cinnamon roll">
+                    </div>
+                    <h2 class="element-title">Strawberry cinnamon roll</h2>
+     
+                    <div class="row-content"> 
+                        <p class="bodytext">Glazing:</h3>
+                        <div class="content-right glazing-selector">
+                            <!-- glazing dropdown, generated in JS -->
+                        </div>
+                    </div>
+
+                    <div class="row-content">
+                        <p class="bodytext">Pack size:</p>
+                        <fieldset>
+                            <div class="content-right radio-selector">
+                                <!-- radio buttons, generated in JS   -->
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="row-content">
+                        <div class = "rollprice">
+                            <!-- price, dynamically generated in JS -->
+                        </div>
+                        <div class="content-right add-to-cart" >
+                            <!-- add to cart button, dynamically generated in JS -->
+                        </div>
+                    </div>
+                </div>    
+        </div>
+    </main>
+</body>
+</html>
