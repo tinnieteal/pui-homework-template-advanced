@@ -33,13 +33,17 @@ class NavBar extends React.Component {
 			}, 300);
 		}, 3000);
 
+		const tooltip = document.querySelector(".tooltip-container");
+		tooltip.style.opacity = "1";		
+		tooltip.style.display = "block";
+
 		return (
 			<span className="tooltip-text" id="bottom">
 				<p id="tooltip-title"> Added to cart: </p>
 				<p id="tooltip-item"> {item.title} </p>
 				<p> {item.glazing} glazing</p>
 				<p> Pack of {item.packSize}</p>
-				<p> Price: $ {item.price}</p>
+				<p> Price: $ {item.price.toFixed(2)}</p>
 			</span>
 		);
 	}
