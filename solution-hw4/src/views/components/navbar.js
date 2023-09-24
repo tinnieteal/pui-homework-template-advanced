@@ -14,10 +14,10 @@ class NavBar extends React.Component {
 	}
 
 	renderCartItems() {
-		if (this.props.cart.length == 0 || ) {	
+		if (this.props.cart.length == 0 ) {	
 			return (<div></div>);
 		}
-		
+
 		const item = this.props.cart[this.props.cart.length - 1];
 
 		// Set a timeout to remove the tooltip after 3 seconds
