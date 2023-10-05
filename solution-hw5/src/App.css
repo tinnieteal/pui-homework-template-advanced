@@ -293,10 +293,7 @@
   justify-content: center;
 }
 
-/* citation: https://markheath.net/post/customize-radio-button-css */
-.content-right input[type="radio"]:checked + label {
-  background-color:lightgrey;
-}
+
 
 fieldset{
   margin: 0;

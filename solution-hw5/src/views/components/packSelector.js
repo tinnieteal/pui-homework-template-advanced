@@ -18,6 +18,9 @@ class PackSelector extends React.Component {
   renderOptions(item_id) {
     return packSizeOptions.map((value, index) => {
       const unid = "pack-size-" + item_id + "-" + index;
+      let style = {
+        backgroundColor: this.state.selected == index ? "lightgrey" : "white",
+      };
       return (
         <div key={unid}>
           <input
@@ -28,7 +31,9 @@ class PackSelector extends React.Component {
             onChange={() => this.handleChange(index)}
             checked={this.state.selected == index}
           ></input>
-          <label htmlFor={unid}>{value}</label>
+          <label style={style} htmlFor={unid}>
+            {value}
+          </label>
         </div>
       );
     });

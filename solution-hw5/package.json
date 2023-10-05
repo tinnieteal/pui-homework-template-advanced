@@ -1,5 +1,5 @@
 {
-  "name": "solution-hw3",
+  "name": "solution-hw5",
   "homepage": ".",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b gh-pages -e solution-hw4",
+    "deploy": "gh-pages -d build -b gh-pages -e solution-hw5",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
