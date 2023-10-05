@@ -95,6 +95,7 @@
   margin: 0 80px 0 80px;
   display:flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .searchsort-container{
@@ -117,6 +118,7 @@
   border-top: 4px solid black;
   width:100%;
   height:auto; 
+  text-align: center;
 }
 
 .cart-title-container{

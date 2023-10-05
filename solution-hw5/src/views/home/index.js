@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/navbar.js";
 import Item from "../components/item.js";
 import SearchSort from "../components/searchSort.js";
+import ShoppingCart from "../components/shoppingCart.js";
 
 const cinnamonRolls = [
   {
@@ -41,10 +42,17 @@ const cinnamonRolls = [
 class Homepage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      renderingRolls: [...cinnamonRolls],
+      query: "",
+      cartClicked: false,
+    };
+    this.updateOrder = this.updateOrder.bind(this);
+    this.updateQuery = this.updateQuery.bind(this);
+    this.updateCartClicked = this.updateCartClicked.bind(this);
   }
-
   renderItems() {
-    return cinnamonRolls.map((item, index) => (
+    return this.state.renderingRolls.map((item, index) => (
       <Item
         key={index}
         item_id={index}
@@ -56,86 +64,67 @@ class Homepage extends React.Component {
     ));
   }
 
+  updateOrder(command) {
+    let newRenderingRolls = [...this.state.renderingRolls]; // copy the array
+    if (command == 0) {
+      // sort renderingRolls state by base price
+      newRenderingRolls.sort((a, b) => a.basePrice - b.basePrice);
+      this.setState({
+        renderingRolls: newRenderingRolls,
+      });
+    } else if (command == 1) {
+      // sort cinnamonrolls by title
+      newRenderingRolls.sort((a, b) => a.title.localeCompare(b.title));
+      this.setState({
+        renderingRolls: newRenderingRolls,
+      });
+    }
+  }
+
+  updateQuery(query) {
+    this.setState({ query: query });
+    if (query == "") {
+      this.setState({ renderingRolls: [...cinnamonRolls] });
+    } else {
+      let newRenderingRolls = [...cinnamonRolls];
+      newRenderingRolls = newRenderingRolls.filter((item) =>
+        item.title.toLowerCase().includes(query.toLowerCase())
+      );
+      this.setState({ renderingRolls: newRenderingRolls });
+    }
+  }
+
+  updateCartClicked() {
+    console.log("updateCartClicked");
+    this.setState({ cartClicked: !this.state.cartClicked });
+  }
+
   render() {
     return (
       <div>
         <header>
-          <NavBar cart={this.props.cart} />
+          <NavBar cartClicked={this.updateCartClicked} cart={this.props.cart} />
         </header>
 
         <main>
           <div className="body-container">
-            <div className="cart-container">
-              <div className="cart-title-container">
-                <p>Shopping Cart ({this.props.cart.length} items)</p>
-                <p>Total: $xx</p>
-              </div>
-              <div className="grid-container card-outermost-container">
-                {/* cinammon roll 1: */}
-                <div className="cart-item-container">
-                  <div className="image-container">
-                    <img
-                      src="assets/products/original-cinnamon-roll.jpg"
-                      alt="original cinnamon roll"
-                    />
-                  </div>
-                  <p>Original Cinnamon Roll</p>
-                  <p>Glazing: Sugar Milk</p>
-                  <p>Pack Size: 6</p>
-                  <p id="cart-price">$2.49</p>
-                  <button className="remove-button">Remove</button>
-                </div>
-
-                {/* cinammon roll 2: */}
-                <div className="cart-item-container">
-                  <div className="image-container">
-                    <img
-                      src="assets/products/original-cinnamon-roll.jpg"
-                      alt="original cinnamon roll"
-                    />
-                  </div>
-                  <p>Original Cinnamon Roll</p>
-                  <p>Glazing: Sugar Milk</p>
-                  <p>Pack Size: 6</p>
-                  <p id="cart-price">$2.49</p>
-                  <button className="remove-button">Remove</button>
-                </div>
-
-                {/* cinammon roll 3: */}
-                <div className="cart-item-container">
-                  <div className="image-container">
-                    <img
-                      src="assets/products/original-cinnamon-roll.jpg"
-                      alt="original cinnamon roll"
-                    />
-                  </div>
-                  <p>Original Cinnamon Roll</p>
-                  <p>Glazing: Sugar Milk</p>
-                  <p>Pack Size: 6</p>
-                  <p id="cart-price">$2.49</p>
-                  <button className="remove-button">Remove</button>
-                </div>
-
-                {/* cinammon roll 4: */}
-                <div className="cart-item-container">
-                  <div className="image-container">
-                    <img
-                      src="assets/products/original-cinnamon-roll.jpg"
-                      alt="original cinnamon roll"
-                    />
-                  </div>
-                  <p>Original Cinnamon Roll</p>
-                  <p>Glazing: Sugar Milk</p>
-                  <p>Pack Size: 6</p>
-                  <p id="cart-price">$2.49</p>
-                  <button className="remove-button">Remove</button>
-                </div>
-              </div>
-            </div>
-
-            <SearchSort />
-            {/* // cinnamon rolls */}
-            <div className="grid-container">{this.renderItems()}</div>
+            {/* conditionally render shopping cart component based on cartClicked state */}
+            {this.state.cartClicked && (
+              <ShoppingCart
+                removeFromCart={this.props.removeFromCart}
+                cart={this.props.cart}
+              />
+            )}
+            <SearchSort
+              updateQuery={this.updateQuery}
+              updateOrder={this.updateOrder}
+            />
+            {/* if no matching */}
+            {this.state.renderingRolls.length == 0 ? (
+              <p>No Match!</p>
+            ) : (
+              <div className="grid-container">{this.renderItems()}</div>
+            )}
           </div>
         </main>
       </div>

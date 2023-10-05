@@ -25,6 +25,7 @@ class Item extends React.Component {
     // console.log(this);
     const item = {
       // title: "hello"
+      img: this.props.img,
       title: this.props.title,
       packSize: this.state.packSize,
       glazing: glazingOptions[this.state.glazingOptionIndex],

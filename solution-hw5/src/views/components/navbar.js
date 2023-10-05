@@ -61,7 +61,13 @@ class NavBar extends React.Component {
                 PRODUCTS
               </button>
               <li>
-                <span className="navmenu-link hover-text">CART</span>
+                <button
+                  type="submit"
+                  className="navmenu-link link"
+                  onClick={() => this.props.cartClicked()}
+                >
+                  CART
+                </button>
                 <div className="tooltip-container">
                   {this.renderCartItems()}
                 </div>
