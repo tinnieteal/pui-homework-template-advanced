@@ -5,48 +5,48 @@ class NavBar extends React.Component {
     super(props);
   }
 
-	calTotalPrice() {
-		let totalPrice = 0.0;
-		for (let i = 0; i < this.props.cart.length; i++) {
-			totalPrice += this.props.cart[i].price;
-		}
-		return totalPrice;
-	}
+  calTotalPrice() {
+    let totalPrice = 0.0;
+    for (let i = 0; i < this.props.cart.length; i++) {
+      totalPrice += this.props.cart[i].price;
+    }
+    return totalPrice;
+  }
 
-	renderCartItems() {
-		if (this.props.cart.length == 0 ) {	
-			return (<div></div>);
-		}
+  renderCartItems() {
+    if (this.props.cart.length === 0) {
+      return <div></div>;
+    }
 
-		const item = this.props.cart[this.props.cart.length - 1];
+    const item = this.props.cart[this.props.cart.length - 1];
 
-		// Set a timeout to remove the tooltip after 3 seconds
-		setTimeout(() => {
-			// fade out the tooltip;
-			const tooltip = document.querySelector(".tooltip-container");
-			tooltip.style.opacity = "0";
-			// after fading out, hide the tooltip
-			setTimeout(() => {
-				tooltip.style.display = "none";
-				// reset the opacity for the next use
-				tooltip.style.opacity = "1";
-			}, 300);
-		}, 3000);
+    // Set a timeout to remove the tooltip after 3 seconds
+    setTimeout(() => {
+      // fade out the tooltip;
+      const tooltip = document.querySelector(".tooltip-container");
+      tooltip.style.opacity = "0";
+      // after fading out, hide the tooltip
+      setTimeout(() => {
+        tooltip.style.display = "none";
+        // reset the opacity for the next use
+        tooltip.style.opacity = "1";
+      }, 300);
+    }, 3000);
 
-		const tooltip = document.querySelector(".tooltip-container");
-		tooltip.style.opacity = "1";		
-		tooltip.style.display = "block";
+    const tooltip = document.querySelector(".tooltip-container");
+    tooltip.style.opacity = "1";
+    tooltip.style.display = "block";
 
-		return (
-			<span className="tooltip-text" id="bottom">
-				<p id="tooltip-title"> Added to cart: </p>
-				<p id="tooltip-item"> {item.title} </p>
-				<p> {item.glazing} glazing</p>
-				<p> Pack of {item.packSize}</p>
-				<p> Price: $ {item.price.toFixed(2)}</p>
-			</span>
-		);
-	}
+    return (
+      <span className="tooltip-text" id="bottom">
+        <p id="tooltip-title"> Added to cart: </p>
+        <p id="tooltip-item"> {item.title} </p>
+        <p> {item.glazing} glazing</p>
+        <p> Pack of {item.packSize}</p>
+        <p> Price: $ {item.price.toFixed(2)}</p>
+      </span>
+    );
+  }
 
   render() {
     return (
@@ -63,8 +63,8 @@ class NavBar extends React.Component {
               <li>
                 <span className="navmenu-link hover-text">CART</span>
                 <div className="tooltip-container">
-									{this.renderCartItems()}
-								</div>
+                  {this.renderCartItems()}
+                </div>
               </li>
             </ul>
           </div>

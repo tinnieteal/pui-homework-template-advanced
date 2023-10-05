@@ -10,10 +10,10 @@ class PackSelector extends React.Component {
     };
   }
 
-	handleChange(index) {
-		this.setState({selected: index});
-		this.props.onChange( packSizeOptions[index] );
-	}
+  handleChange(index) {
+    this.setState({ selected: index });
+    this.props.onChange(packSizeOptions[index]);
+  }
 
   renderOptions(item_id) {
     return packSizeOptions.map((value, index) => {
@@ -25,7 +25,7 @@ class PackSelector extends React.Component {
             name={unid}
             id={unid}
             value={value}
-            onChange={() => this.handleChange(index) }
+            onChange={() => this.handleChange(index)}
             checked={this.state.selected == index}
           ></input>
           <label htmlFor={unid}>{value}</label>

@@ -59,7 +59,7 @@ class Homepage extends React.Component {
     return (
       <div>
         <header>
-          <NavBar cart={this.props.cart}/>
+          <NavBar cart={this.props.cart} />
         </header>
 
         <main>
