@@ -1,0 +1,344 @@
+.navbar {
+  /* border-bottom: 4px solid black; */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none; /* Remove list bullets */ 
+  float: right;
+  padding-inline-start: 0px;
+  width: 256px;
+  margin-right: 40px;
+  margin-bottom: 5px;
+} 
+
+.navbar li {
+  display: inline;
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.nav-menu{
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  align-items: end;
+  border-bottom: 4px solid black;
+}
+
+.nav-menu-right{
+ position: relative;
+
+}
+
+.tooltip-text p{
+  margin: 0px;
+}
+
+.tooltip-text #tooltip-title{
+  margin-bottom: 20px;
+}
+
+.tooltip-text #tooltip-item{
+  font-weight: bold;
+}
+
+/* citation: https://blog.hubspot.com/website/html-tooltip */
+.tooltip-text{
+  position: absolute;
+  border: 1px solid lightgrey;
+  margin-top: 3px;
+  margin-left: -30px;
+  z-index: 1000;
+  width: 200px;
+  height: 200x;
+  color: black;
+  font-size: 14px;
+  background-color: white;
+  padding: 5px 0px 5px 8px; 
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.tooltiptext {
+  margin: 0px;
+}
+
+.hover-text {
+  position: relative;
+}
+
+.cart-text{
+  font-size: 16px;
+  margin: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-row-container {
+  display: grid;
+  grid-template-columns: 360px auto;
+  column-gap: 10px;
+  margin: 20px 80px;
+}
+
+.nav-column-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 32px 0px 32px 0px;
+}
+
+.body-container{
+  margin: 0 80px 0 80px;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.searchsort-container{
+  display: flex;
+  align-items: center;
+}
+
+#search-bar{
+  width: 220px;
+  margin-left: 35px;
+}
+
+#sort-by{
+  margin-left: 50px;
+  margin-right: 4px;
+}
+
+.cart-container{
+  border-bottom: 4px solid black;
+  border-top: 4px solid black;
+  width:100%;
+  height:auto; 
+  text-align: center;
+}
+
+.cart-title-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.web-title{
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.price-text{
+  font-size: 24px;
+  font-weight: bold;
+  margin: 32px 0px 32px 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bodytext{
+  font-size: 18px;
+  margin: 12px 0px 12px 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.logo-container {
+  width: 360px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 30px 140px 30px 140px;
+}
+
+.grid-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 5px;
+}
+
+.card-outermost-container{
+  width: 800px;
+}
+
+.cart-item-container{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cart-item-container p{
+  margin: 0px;
+}
+
+.cart-item-container .image-container{
+  width: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+#cart-price{
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.remove-button{
+  background-color: transparent;
+  border-color:transparent;
+  /* underline the text */
+  text-decoration: underline;
+ }
+
+.row-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+  width: 274px;
+}
+
+.image-container {
+  width: 270px;
+  height: 270px;
+  border: 2px solid black;
+  margin-bottom: 4px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.element-title {
+  margin: 0 0 20px 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.row-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content-right {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+/* citation: https://stackoverflow.com/questions/14218307/select-arrow-style-change */
+.dropdown{
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='48' viewBox='0 0 24 24' width='48' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 105px;
+  background-position-y: -8px;
+  height: 35px;
+  width: 155px;
+  font-size: 16px;
+  padding-left: 3px;
+  border-color: black;
+  border-width: 2px;
+}
+
+.button-pack-size {
+  border-radius: 0;
+  border-color: black;
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+  background-color: white;
+}
+
+/* hide the circular radio button */
+/* citation: https://markheath.net/post/customize-radio-button-css */
+.content-right input[type="radio"]{
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.content-right label {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  font-size: 14px;
+  border: 2px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+fieldset{
+  margin: 0;
+  padding: 0;
+  border-color: transparent;
+}
+
+.button-add-to-cart {
+  width: 150px;
+  height: 40px;
+  border-radius: 0%;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navmenu-link{
+  background-color: white;
+  border: transparent;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0px 0px 2px;
+  padding: 0px;
+}
+
+.link:hover {
+  background-color: yellow;
+  font-weight: bold;
+} 
+
+.filled-triangle {
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 13px solid black;
+  margin-left: 10px;
+}
+
+.pack-size-number{
+  width: 10px;
+  height: 10px;
+  border-color: black;
+}
+
+
