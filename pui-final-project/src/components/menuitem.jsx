@@ -8,31 +8,13 @@ class Menuitem extends React.Component {
     };
   }
 
-  // const [onHover, setOnHover] = useState(false);
-
-  // const coffee_filling = document.querySelector(".filling");
-  // const buttons = document.querySelectorAll("button");
-  // let current_element = null;
-
-  // const changeCoffeeType = (selected) => {
-  //   if (current_element) {
-  //     current_element.classList.remove("selected");
-  //     coffee_filling.classList.remove(current_element.id);
-  //   }
-  //   current_element = selected;
-  //   coffee_filling.classList.add(current_element.id);
-  //   current_element.classList.add("selected");
-  // };
-
-  // const setActiveType = (element) => {
-  //   element.toggleClass("selected");
-  // };
-
-  // [...buttons].forEach((button) => {
-  //   button.addEventListener("click", () => {
-  //     changeCoffeeType(button);
-  //   });
-  // });
+  // {this.props.price ? (
+  //   <div
+  //     className={`text-wrapper secondary ${isFocused ? "focused" : ""}`}
+  //   >
+  //     {this.props.price}
+  //   </div>
+  // ) : null}
 
   render() {
     const isFocused = this.state.onHover || this.props.isSelected;
@@ -48,11 +30,6 @@ class Menuitem extends React.Component {
         <div className="div">
           <div className={`text-wrapper ${isFocused ? "focused" : ""}`}>
             {this.props.name}
-          </div>
-          <div
-            className={`text-wrapper secondary ${isFocused ? "focused" : ""}`}
-          >
-            {this.props.price}
           </div>
         </div>
         <svg

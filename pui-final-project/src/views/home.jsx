@@ -16,10 +16,7 @@ function Home() {
           <Beancard />
         </div>
         <div className="home-container-right-bottom">
-          <div
-            className="component-container"
-            onClick={() => navigate("/home")}
-          >
+          <div className="component-container">
             <Brewingcard />
           </div>
           <img src="assets/home/coffee-table.svg" alt="Coffee Table Image" />

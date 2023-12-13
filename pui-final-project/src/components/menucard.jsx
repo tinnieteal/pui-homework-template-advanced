@@ -11,12 +11,11 @@ function Menucard() {
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
       onClick={() => navigate("/menu")}
-    >   
+    >
       {onHover ? (
         <img src="assets/home/menu-panel.svg" alt="Menu Image On Hover" />
       ) : (
         <div>
-          {/* <div className="beans-overlay-text">BEANS</div> */}
           <img src="assets/home/menu-panel-bg.svg" alt="Menu Panel Image" />
         </div>
       )}

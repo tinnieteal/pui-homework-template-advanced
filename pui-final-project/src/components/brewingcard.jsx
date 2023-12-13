@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Brewingcard() {
   const [onHover, setOnHover] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
       className="brewingcard"
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
+      onClick={() => navigate("/brew")}
     >
       {onHover ? (
         <img

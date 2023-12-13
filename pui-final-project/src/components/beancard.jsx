@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Beancard() {
   const [onHover, setOnHover] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
       className="beancard"
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
+      onClick={() => navigate("/bean")}
     >
       {onHover ? (
         <img src="assets/home/beans-onhover.svg" alt="Bean Image On Hover" />

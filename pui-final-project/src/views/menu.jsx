@@ -94,7 +94,7 @@ function Menu() {
                 </div>
                 <div className="plate"></div>
               </div>
-              <p>{item.content}</p>
+              <div className="coffee-card-content">{item.content}</div>
             </div>
           </div>
         </div>
