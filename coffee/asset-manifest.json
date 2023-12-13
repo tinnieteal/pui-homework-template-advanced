@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.79408948.css",
-    "main.js": "/static/js/main.87f204a9.js",
-    "static/js/787.256690c9.chunk.js": "/static/js/787.256690c9.chunk.js",
-    "index.html": "/index.html",
-    "main.79408948.css.map": "/static/css/main.79408948.css.map",
-    "main.87f204a9.js.map": "/static/js/main.87f204a9.js.map",
-    "787.256690c9.chunk.js.map": "/static/js/787.256690c9.chunk.js.map"
+    "main.css": "/pui-homework-template-advanced/coffee/static/css/main.79408948.css",
+    "main.js": "/pui-homework-template-advanced/coffee/static/js/main.bf226e53.js",
+    "static/js/787.256690c9.chunk.js": "/pui-homework-template-advanced/coffee/static/js/787.256690c9.chunk.js",
+    "index.html": "/pui-homework-template-advanced/coffee/index.html",
+    "main.79408948.css.map": "/pui-homework-template-advanced/coffee/static/css/main.79408948.css.map",
+    "main.bf226e53.js.map": "/pui-homework-template-advanced/coffee/static/js/main.bf226e53.js.map",
+    "787.256690c9.chunk.js.map": "/pui-homework-template-advanced/coffee/static/js/787.256690c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.79408948.css",
-    "static/js/main.87f204a9.js"
+    "static/js/main.bf226e53.js"
   ]
 }
